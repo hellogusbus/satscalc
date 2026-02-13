@@ -288,7 +288,18 @@
               )}
             </div>
             <div className="text-center text-sm text-gray-500"><p className="mb-2">1 Bitcoin = 100,000,000 satoshis</p><p className="text-xs opacity-75">Price data from CoinGecko API</p></div>
-            <div className="text-center mt-8"><button onClick={() => setShowDonateModal(true)} className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all hover:scale-105"><Heart className="w-5 h-5" />Support This Project</button><p className="mt-3 text-xs text-gray-500"><a href="mailto:anonymous55383@pm.me?subject=Satcalc%20problem%3A" className="hover:text-orange-500 transition-colors">Report an issue</a></p></div>
+            <div className="text-center mt-8">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
+                <a href="https://bitcoin.org/bitcoin.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border-2 border-orange-500 text-orange-500 rounded-full font-medium hover:bg-orange-50 transition-all hover:scale-105">
+                  Whitepaper
+                </a>
+                <a href="https://www.noagendashow.net/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border-2 border-orange-500 text-orange-500 rounded-full font-medium hover:bg-orange-50 transition-all hover:scale-105">
+                  Propagate the Formula
+                </a>
+              </div>
+              <button onClick={() => setShowDonateModal(true)} className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all hover:scale-105"><Heart className="w-5 h-5" />Support This Project</button>
+              <p className="mt-3 text-xs text-gray-500"><a href="mailto:anonymous55383@pm.me?subject=Satcalc%20problem%3A" className="hover:text-orange-500 transition-colors">Report an issue</a></p>
+            </div>
           </div>
           {showDonateModal && (
             <>
@@ -296,7 +307,7 @@
               <div className="fixed inset-x-0 bottom-0 z-50 slide-up">
                 <div className="glass rounded-t-3xl p-6 sm:p-8 max-w-lg mx-auto bitcoin-shadow">
                   <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center gap-2"><Bitcoin className="w-6 h-6 text-orange-500" /><h3 className="text-xl font-bold text-gray-800">Donate Bitcoin</h3></div>
+                    <div className="flex items-center gap-2"><img src="images/logo-2.png" alt="Bitcoin Logo" className="w-6 h-6" /><h3 className="text-xl font-bold text-gray-800">Donate Bitcoin</h3></div>
                     <button onClick={() => setShowDonateModal(false)} className="p-2 rounded-full hover:bg-gray-100 transition-all"><X className="w-5 h-5 text-gray-500" /></button>
                   </div>
                   <div className="bg-white rounded-2xl p-6 mb-4 flex justify-center">
